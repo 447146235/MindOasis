@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MindOasis - 心灵绿洲</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sage: {
+                50: '#f6fbf7',
+                100: '#eaf7ed',
+                200: '#d5eddb',
+                300: '#b3dec0',
+                400: '#87c69d',
+                500: '#5fab7c',
+                600: '#468b62',
+                700: '#396f50',
+                800: '#2f5841',
+                900: '#274937',
+              },
+              calm: {
+                50: '#f4f8fa',
+                100: '#e0eff5',
+                200: '#c2deeb',
+                300: '#95c6dd',
+                400: '#61a7cb',
+                500: '#3e8bb2',
+                600: '#2e7095',
+                700: '#275a7a',
+              }
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+              serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'shred-fall': 'shredFall 3s linear forwards',
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'shake': 'shake 0.1s linear infinite',
+              'shred-paper': 'shredPaper 3s linear forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              shredFall: {
+                '0%': { transform: 'translateY(-50px) rotate(0deg)', opacity: '1' },
+                '100%': { transform: 'translateY(150px) rotate(10deg)', opacity: '0' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              shake: {
+                '0%, 100%': { transform: 'translateX(0)' },
+                '25%': { transform: 'translateX(-1px)' },
+                '75%': { transform: 'translateX(1px)' },
+              },
+              shredPaper: {
+                '0%': { transform: 'translateY(0)', opacity: '1' },
+                '60%': { opacity: '1' },
+                '100%': { transform: 'translateY(400px)', opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f6fbf7; /* sage-50 */
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #b3dec0;
+        border-radius: 3px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
